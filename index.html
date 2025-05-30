@@ -35,7 +35,69 @@
 </style>
 </head>
 <body>
+
 <h1>Experimentando o Background na Página Web</h1>
 <p>Agora o fundo está com uma cor aleatória que não é branca. Experimente outras também!</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de vídeos educacionais sobre desenvolvimento de sistemas.">
+    <title>Galeria de Vídeos - ADS</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 vídeos por linha */
+            gap: 20px;
+            justify-items: center;
+            margin-top: 30px;
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            max-width: 300px;       /* limite de largura por vídeo */
+            aspect-ratio: 16 / 9;   /* mantém proporção de vídeo */
+            border: none;
+        }
+
+        @media (max-width: 1024px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .video-grid {
+                grid-template-columns: 1fr; /* 1 por linha em celular */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeria de Vídeos Educacionais</h1>
+    <p>Assista aos vídeos abaixo para aprofundar seus conhecimentos em desenvolvimento de sistemas.</p>
+
+    <div class="video-grid">
+        <!-- Substitua VIDEO_ID_X pelos IDs reais dos vídeos -->
+        <iframe src="https://www.youtube.com/embed/nzLiSIm1EiI" title="Título do vídeo 1" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/wq4zBNYhVnM" title="Título do vídeo 2" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/gWfOdT8TK7E" title="Título do vídeo 3" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/reCRmzMYPRk" title="Título do vídeo 4" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/pyKYQNUbdKU" title="Título do vídeo 5" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/oGYcfaKhch0" title="Título do vídeo 6" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/fxqWlFsSV-o" title="Título do vídeo 7" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/n3B5WkHgQ" title="Título do vídeo 8" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
